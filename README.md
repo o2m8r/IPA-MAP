@@ -1,6 +1,6 @@
 # IPA-MAP - Image Poly &lt;Area&gt; MAPper
 
-palitan nlng ung image sa code isa lang naman ung image tag dun bwahahahaha!
+palitan nlng ung img src sa ipa-map.html isa lang naman ung image tag dun bwahahahaha!
 
 <img src="https://raw.githubusercontent.com/theykneel/IPA-MAP/master/screenshots/img-tag.png">
 
