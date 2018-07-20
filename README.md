@@ -2,6 +2,10 @@
 
 palitan nlng ung image sa code isa lang naman ung image tag dun bwahahahaha!
 
+# New
+
+para sa bagong coordinates pwede din irefresh nalang
+
 # Split
 
 pang test lang para makita ung na drawing at kung kumagat ung hover sa image
