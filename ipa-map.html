@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>IPA-MAP - Image Poly &lt;Area&gt; MAPper</title>
+	<style type="text/css" id="style">
+		* {
+			margin: 0;
+		}
+		line {
+			stroke: rgb(255,0,0);
+			stroke-width: 2;
+		}
+		.svg {
+			margin: 0;
+			background-color: pink;
+			opacity: 0.2;
+			position: absolute;
+			z-index: 1;
+		}
+	</style>
+</head>
+<body>
+
+<svg class="svg"></svg> 
+
+<img id="image" src="cat.png" alt="cat" usemap="#cat" style="top: 0; left: 0;">
+
+<map name="cat">
+	<area shape="poly" coords="" href="#meow">
+</map>
+
+<br>
+	Split <input type="checkbox" name="" onclick="document.getElementsByTagName('svg')[0].classList.toggle('svg');">
+<br>
+<h3>Poly Coordinates:</h3>
+<div id="coords"></div>
+
+<script>
+
+	var output = false;
+	var img = document.getElementById('image');
+	var svg = document.getElementsByTagName('svg')[0];
+	var x1, y1, x2, y2;
+
+	svg.onclick = function(event){
+
+		if(event.target.classList.contains('svg')){
+			if(output == false){
+				document.getElementById('coords').innerHTML = event.layerX+','+event.layerY;
+				x1 = event.layerX;
+				y1 = event.layerY;
+				output = true;
+			}else{
+				document.getElementById('coords').innerHTML += ','+event.layerX+','+event.layerY;
+				x2 = event.layerX;
+				y2 = event.layerY;
+				document.getElementsByTagName('svg')[0].innerHTML += '<line x1="'+x1+'" y1="'+y1+'" x2="'+x2+'" y2="'+y2+'" />';
+				x1 = x2;
+				y1 = y2;
+			}
+		}
+		
+		
+	}
+
+	window.onload = function(){
+		document.getElementsByTagName('svg')[0].setAttribute("height", document.getElementById('image').height+"px");
+		document.getElementsByTagName('svg')[0].setAttribute("width", document.getElementById('image').width+"px");
+	}
+
+</script>
+
+</body>
+</html>
