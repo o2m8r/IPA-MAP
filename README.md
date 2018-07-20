@@ -2,9 +2,13 @@
 
 palitan nlng ung image sa code isa lang naman ung image tag dun bwahahahaha!
 
+<img src="https://raw.githubusercontent.com/theykneel/IPA-MAP/master/screenshots/img-tag.png">
+
 # New
 
 para sa bagong coordinates pwede din irefresh nalang
+
+<img src="https://raw.githubusercontent.com/theykneel/IPA-MAP/master/screenshots/new-button-result.png">
 
 # Split
 
